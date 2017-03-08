@@ -4,7 +4,7 @@ hpc <- read.table("household_power_consumption.txt",
 hpc <- subset(hpc, hpc$Date %in% c("2/1/2007", "2/2/2007"))
 dateTime <- strptime(paste(hpc$Date, hpc$Time), format = "%m/%d/%Y %H:%M:%S")
 
-png(file="figure/plot3.png")
+png(file="plot3.png")
 plot(dateTime, 
      hpc$Sub_metering_1, 
      type = 'l', 
